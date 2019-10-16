@@ -1,4 +1,4 @@
-## [0.1] - 10.16.2019
+## [0.1.0] - 10.16.2019
 
 Remove visibleForTesting annotations.
 
