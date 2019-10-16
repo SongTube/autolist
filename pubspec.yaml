@@ -4,7 +4,7 @@ description: Animated list views, automatically.
   animated list views, automatically managing insertions and deletions.
 version: 0.1.0
 author: Ben Weitzman <benweitzman@gmail.com>
-homepage: https://www.benweitzman.com
+homepage: https://gitlab.com/benweitzman/autolist/
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
