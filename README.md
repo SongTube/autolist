@@ -7,8 +7,7 @@ animated list views, automatically managing insertions and deletions.
 
 ## Demo
 
-![autolist_demo](/uploads/83979c1e3fb81c77de8ed5f3ff0b02b3/autolist_demo.mov)
-
+![autolist_demo](https://gitlab.com/benweitzman/autolist/uploads/b6c0666342803528d069474ad0b48fe7/autolist_demo.gif)
 ## To use:
 
 See more in `example/lib/main.dart`
