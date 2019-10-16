@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
-
 import 'adjustment.dart';
 import 'operation.dart';
 
-@visibleForTesting
 class DifferenceSet implements Comparable<DifferenceSet> {
   final List<Adjustment> adjustments;
 

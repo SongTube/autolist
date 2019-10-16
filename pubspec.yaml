@@ -1,8 +1,10 @@
 name: autolist
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+description: Animated list views, automatically.
+  Autolist transforms regular dart lists them into a fully
+  animated list views, automatically managing insertions and deletions.
+version: 0.1.0
+author: Ben Weitzman <benweitzman@gmail.com>
+homepage: https://www.benweitzman.com
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

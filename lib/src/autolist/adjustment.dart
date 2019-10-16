@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
-
 import 'operation.dart';
 
-@visibleForTesting
 class Adjustment {
   final Operation operation;
   final int oldIndex;
