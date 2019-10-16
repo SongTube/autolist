@@ -2,7 +2,7 @@ name: autolist
 description: Animated list views, automatically.
   Autolist transforms regular dart lists them into a fully
   animated list views, automatically managing insertions and deletions.
-version: 0.1.0
+version: 0.1.0+1
 author: Ben Weitzman <benweitzman@gmail.com>
 homepage: https://gitlab.com/benweitzman/autolist/
 

@@ -9,11 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Autolist Demo'),
     );
   }
 }
@@ -63,15 +64,20 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Expanded(
                 child: Container(
+                  margin: EdgeInsets.only(top: 20, left: 20),
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     border: Border(
-                      top: BorderSide(),
+                      top: BorderSide(color: Colors.grey[200]),
                     ),
                   ),
                   child: Text(
                     item.toString(),
                     key: Key(item.toString()),
+                    style: TextStyle(
+                        fontFamily: "Sans",
+                        fontWeight: FontWeight.w600,
+                        color: Colors.blue[900]),
                   ),
                 ),
               ),
@@ -87,10 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
             tooltip: 'Remove item',
             child: Icon(Icons.remove),
           ),
-          FloatingActionButton(
-            onPressed: _addItem,
-            tooltip: 'Add item',
-            child: Icon(Icons.add),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: FloatingActionButton(
+              onPressed: _addItem,
+              tooltip: 'Add item',
+              child: Icon(Icons.add),
+            ),
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
