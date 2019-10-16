@@ -1,3 +1,7 @@
+## [0.1.0+2] - 10.16.2019
+
+Add demo to README
+
 ## [0.1.0+1] - 10.16.2019
 
 Update homepage in pubspec to point to gitlab
