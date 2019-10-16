@@ -1,5 +1,7 @@
 # Autolist
 
+[![pub package](https://img.shields.io/pub/v/autolist?color=blue&style=flat-square)](https://pub.dev/packages/autolist)
+
 Animated list views, automatically.
 
 Autolist transforms regular dart lists them into a fully
