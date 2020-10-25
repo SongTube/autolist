@@ -39,10 +39,11 @@ class AutoList<T> extends StatefulWidget {
 
   final CompareOn<T> compareOn;
 
-  final physics;
+  final ScrollPhysics physics;
 
-  final shrinkWrap;
-  final padding;
+  final bool shrinkWrap;
+  
+  final EdgeInsetsGeometry padding;
 
   /// Build an AutoList. Exactly one of [combinedBuilder] and [itemBuilder] is
   /// required.
