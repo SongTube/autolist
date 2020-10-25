@@ -1,4 +1,4 @@
-import 'package:autolist/src/transitions/scale_then_slide_transition.dart';
+import 'package:autolist/src/transitions/fadeAndSlideTransition.dart';
 import 'package:flutter/widgets.dart';
 
 import 'difference_set.dart';
@@ -89,7 +89,7 @@ class AutoList<T> extends StatefulWidget {
     Animation<double> animation,
     Widget child,
   ) {
-    return ScaleThenSlideTransition(
+    return FadeAndSlideTransition(
       animation: animation,
       child: child,
     );
