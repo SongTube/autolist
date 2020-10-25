@@ -62,7 +62,7 @@ class SizeNoClipTransition extends AnimatedWidget {
       // ignore: curly_braces_in_flow_control_structures
       alignment = AlignmentDirectional(axisAlignment, -1.0);
     return ClipRect(
-      clipBehavior: Clip.none,
+      clipBehavior: Clip.hardEdge,
       child: Align(
         alignment: alignment,
         heightFactor:
