@@ -39,6 +39,7 @@ class AutoList<T> extends StatefulWidget {
 
   final CompareOn<T> compareOn;
 
+  final shrinkWrap;
   final padding;
 
   /// Build an AutoList. Exactly one of [combinedBuilder] and [itemBuilder] is
@@ -56,6 +57,7 @@ class AutoList<T> extends StatefulWidget {
     Key key,
     @required this.items,
     @required this.duration,
+    this.shrinkWrap = false,
     AutoListCombinedItemBuilder<T> combinedBuilder,
     AutoListAnimationBuilder animationBuilder,
     AutoListItemBuilder<T> itemBuilder,
@@ -149,6 +151,7 @@ class _AutoListState<T> extends State<AutoList<T>> {
   @override
   Widget build(BuildContext context) {
     return AnimatedList(
+      shrinkWrap: widget.shrinkWrap,
       padding: widget.padding,
       key: _listKey,
       initialItemCount: widget.items.length,
