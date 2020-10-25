@@ -39,6 +39,8 @@ class AutoList<T> extends StatefulWidget {
 
   final CompareOn<T> compareOn;
 
+  final physics;
+
   final shrinkWrap;
   final padding;
 
@@ -58,6 +60,7 @@ class AutoList<T> extends StatefulWidget {
     @required this.items,
     @required this.duration,
     this.shrinkWrap = false,
+    this.physics = const AlwaysScrollableScrollPhysics(),
     AutoListCombinedItemBuilder<T> combinedBuilder,
     AutoListAnimationBuilder animationBuilder,
     AutoListItemBuilder<T> itemBuilder,
@@ -151,6 +154,7 @@ class _AutoListState<T> extends State<AutoList<T>> {
   @override
   Widget build(BuildContext context) {
     return AnimatedList(
+      physics: widget.physics,
       shrinkWrap: widget.shrinkWrap,
       padding: widget.padding,
       key: _listKey,
