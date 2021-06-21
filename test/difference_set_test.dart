@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Insert after remove', () {
-    final diff = DifferenceSet.between(oldList: [1, 2, 3], newList: [2, 4, 3]);
+    final diff = DifferenceSet.between(oldList: [1, 2, 3], newList: [2, 4, 3])!;
 
     expect(
       diff.adjustments,
@@ -15,7 +15,7 @@ void main() {
   });
 
   test('Remove after insert', () {
-    final diff = DifferenceSet.between(oldList: [1, 2, 3], newList: [4, 1, 3]);
+    final diff = DifferenceSet.between(oldList: [1, 2, 3], newList: [4, 1, 3])!;
 
     expect(
       diff.adjustments,
@@ -27,7 +27,7 @@ void main() {
   });
 
   test('Remove two', () {
-    final diff = DifferenceSet.between(oldList: [1, 2, 3, 4], newList: [2, 3]);
+    final diff = DifferenceSet.between(oldList: [1, 2, 3, 4], newList: [2, 3])!;
 
     expect(
       diff.adjustments,

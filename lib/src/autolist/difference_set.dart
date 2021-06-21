@@ -6,10 +6,10 @@ class DifferenceSet implements Comparable<DifferenceSet> {
 
   DifferenceSet._(this.adjustments);
 
-  static DifferenceSet between<T>({Iterable<T> oldList, Iterable<T> newList}) {
+  static DifferenceSet? between<T>({required Iterable<T> oldList, required Iterable<T> newList}) {
     // d[i][j] will hold the edit sequence between the first i characters of the
     // old list and the first j characters of the new list.
-    List<List<DifferenceSet>> d = List.generate(oldList.length + 1, (_) {
+    List<List<DifferenceSet?>> d = List.generate(oldList.length + 1, (_) {
       return List.filled(newList.length + 1, null);
     });
 
@@ -53,7 +53,7 @@ class DifferenceSet implements Comparable<DifferenceSet> {
     return d[oldList.length][newList.length];
   }
 
-  static A _min<A extends Comparable<A>>(A x, A y) {
+  static A _min<A extends Comparable<A>?>(A x, A y) {
     if (x.compareTo(y) < 0) {
       return x;
     } else {
@@ -61,15 +61,15 @@ class DifferenceSet implements Comparable<DifferenceSet> {
     }
   }
 
-  static DifferenceSet _insertion(List<List<DifferenceSet>> d, int i, int j) {
+  static DifferenceSet _insertion(List<List<DifferenceSet?>> d, int i, int j) {
     return DifferenceSet._(
-      d[i][j].adjustments + [Adjustment(Operation.insert, j, i)],
+      d[i][j]!.adjustments + [Adjustment(Operation.insert, j, i)],
     );
   }
 
-  static DifferenceSet _removal(List<List<DifferenceSet>> d, int i, int j) {
+  static DifferenceSet _removal(List<List<DifferenceSet?>> d, int i, int j) {
     return DifferenceSet._(
-      d[i][j].adjustments + [Adjustment(Operation.remove, i, j)],
+      d[i][j]!.adjustments + [Adjustment(Operation.remove, i, j)],
     );
   }
 

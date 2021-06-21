@@ -8,9 +8,9 @@ class FadeAndSlideTransition extends StatelessWidget {
   final Widget child;
 
   const FadeAndSlideTransition({
-    Key key,
-    @required this.animation,
-    @required this.child,
+    Key? key,
+    required this.animation,
+    required this.child,
   }) : super(key: key);
 
   @override
