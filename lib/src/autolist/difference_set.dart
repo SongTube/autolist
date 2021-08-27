@@ -54,7 +54,7 @@ class DifferenceSet implements Comparable<DifferenceSet> {
   }
 
   static A _min<A extends Comparable<A>?>(A x, A y) {
-    if (x.compareTo(y) < 0) {
+    if (x!.compareTo(y) < 0) {
       return x;
     } else {
       return y;
